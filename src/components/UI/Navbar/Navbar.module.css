@@ -1,0 +1,159 @@
+.mainNavbar{
+    width: initial;
+    height: 122px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav{
+    background: white;
+    box-shadow: none;
+}
+
+.ulList{
+    color: black;
+}
+
+.ulList ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ulList ul li{
+    margin: 0 50px 0 0;
+    padding: 0;
+    height: auto;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.ulList ul li:last-child{
+    margin: 0;
+}
+
+.desktopMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    display: block;
+    width: 80px;
+    height: 76px;
+    cursor: pointer;
+}
+
+.logo img{
+    width: 80px;
+    height: 76px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.infoPlace{
+    margin-right: 86px;
+    display: flex;
+    align-items: center;
+}
+
+.infoPlace span{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.infoFuncButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.infoFuncButtons svg{
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.badge{
+    margin: 0 0 -15px -15px;
+}
+
+/*mobile*/
+
+.mobileMain{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 67px;
+    padding: 0 10px;
+
+}
+
+.burgerButton{
+    display: flex;
+    align-items: center;
+}
+
+.mobileLogo p{
+    color: black;
+    font-family: 'Staatliches', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .mobileMain{
+        display: flex;
+    }
+
+    .desktopMain{
+        display: none;
+    }
+
+    .mainNavbar{
+        height: 67px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1170px){
+    .infoPlace{
+        margin-right: 30px;
+    }
+
+    .ulList ul li{
+        margin: 0 20px 0 0;
+    }
+
+    .ulList ul li:last-child{
+        margin: 0;
+    }
+}

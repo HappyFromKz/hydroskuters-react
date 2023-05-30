@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.doesNotExistBlock{
+    width: 100%;
+    height: 100%;
+}
+
+.doesNotExistText{
+    margin: auto;
+}
+
+@media screen and (max-width: 1170px){
+    .container{
+        width: 100%;
+    }
+}
