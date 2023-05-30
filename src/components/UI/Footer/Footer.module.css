@@ -1,12 +1,123 @@
 .footer{
     display: flex;
     flex-direction: column;
+    background: #F0F0F4;
+    padding: 43px 0 27px 0;
 }
 
 .footerMainInfo{
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footerLawyerInfo{
+    margin-top: 46px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
+.footerLawyerInfo p{
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #48494D;
+}
+
+.footerLawyerInfo p:first-child{
+    margin-right: 81px;
+}
+
+.footerMainInfoSpam {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerMainInfoSpamInput{
+    display: flex;
+    flex-direction: row;
+    margin-top: 36px;
+}
+
+.footerMainInfoSpamInput input{
+    margin: 0 !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 32px 42px -12px rgba(34, 60, 80, 0.12);
+    border: none !important;
+    text-indent: 13px;
+}
+
+
+.footerMainInfoSpamInput button{
+    background: #1C62CD;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.footerMainInfoSpamInput input::placeholder{
+    color: #C4C4C4;
+}
+
+.footerMainInfoLists{
+    display: flex;
+    flex-direction: row;
+}
+
+.footerMainInfoLists ul:first-child{
+    margin-right: 5vw;
+}
+
+.footerMainInfoLists ul li{
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.footerMainInfoLists ul li:first-child{
+    font-weight: 700;
+}
+
+.footerMainInfoIcons svg{
+    margin-right: 30px;
+}
+
+.footerMainInfoIcons svg:last-child{
+    margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        padding: 20px 0 20px 0;
+    }
+
+    .footerMainInfo{
+        flex-direction: column;
+    }
+
+    .footerMainInfoSpam{
+        margin-bottom: 20px;
+    }
+
+    .footerMainInfoLists{
+        margin-bottom: 20px;
+    }
+
+    .footerLawyerInfo{
+        margin-top: 20px;
+    }
+
+    .footerMainInfoSpamInput{
+        margin-top: 15px;
+    }
 }

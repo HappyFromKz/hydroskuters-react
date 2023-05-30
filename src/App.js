@@ -34,8 +34,8 @@ function App() {
           <div className={'container'}>
               <Navbar isActive={menuActive} setIsActive={setMenuActive}/>
               <AppRouter/>
-              <Footer/>
           </div>
+          <Footer/>
           <ModelMenu items={menuItems} isActive={menuActive} setIsActive={setMenuActive}/>
       </BrowserRouter>
     );
