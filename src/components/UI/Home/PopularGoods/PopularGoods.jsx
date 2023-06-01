@@ -7,7 +7,7 @@ import manCastum from "C:/projects/react/hydroskuters-react/src/assets/popularGo
 
 import React from 'react';
 import cl from './PopularGoods.module.css'
-import Carousel from 'primereact'
+import { Carousel } from 'primereact/carousel';
 import MyButton from "../../MyButton/MyButton";
 import MyPicture from "../../MyPicture/MyPicture";
 import {useNavigate} from "react-router-dom";
