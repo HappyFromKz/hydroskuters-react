@@ -1,11 +1,35 @@
 import React from 'react';
+import TopAdvertising from "../components/UI/Home/TopAdvertising/TopAdvertising";
+import cl from "./pagesStyle/Home.module.css"
+import SearchProduct from "../components/UI/Home/SearchProduct/SearchProduct";
+import HomeCategoriesMenu from "../components/UI/Home/HomeCategoriesMenu/HomeCategoriesMenu";
+import PopularGoods from "../components/UI/Home/PopularGoods/PopularGoods";
+
+
+import quadro from "C:/projects/react/hydroskuters-react/src/assets/categoriesHomeMenu/quadro.png";
+import gidro from "C:/projects/react/hydroskuters-react/src/assets/categoriesHomeMenu/gidro.png";
+import cater from "C:/projects/react/hydroskuters-react/src/assets/categoriesHomeMenu/cater.png";
+import snow from "C:/projects/react/hydroskuters-react/src/assets/categoriesHomeMenu/snow.png";
+import everyhod from "C:/projects/react/hydroskuters-react/src/assets/categoriesHomeMenu/everyhod.png";
+import dvig from "C:/projects/react/hydroskuters-react/src/assets/categoriesHomeMenu/dvig.png";
 
 const Home = () => {
-    return (
-        <div>
-            <h1>Home</h1>
-        </div>
-    );
+
+  const homeCategories = [{id: 1, name: 'Квадроциклы', path: 'atvs', pic: quadro},
+    {id: 2, name: 'Гидроциклы', path: 'jet-skis', pic: gidro},
+    {id: 3, name: 'Катера', path: 'carriage', pic: cater},
+    {id: 4, name: 'Снегоходы', path: 'snowmobiles', pic: snow},
+    {id: 5, name: 'Вездеходы', path: 'all-terrain-vehicles', pic: everyhod},
+    {id: 6, name: 'Двигатели', path: 'engines', pic: dvig}]
+
+  return (
+    <div className={cl.main}>
+      <TopAdvertising/>
+      <SearchProduct/>
+      <HomeCategoriesMenu homeCategories={homeCategories}/>
+      <PopularGoods/>
+    </div>
+  );
 };
 
 export default Home;

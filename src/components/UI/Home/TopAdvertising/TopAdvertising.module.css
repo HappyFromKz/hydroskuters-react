@@ -1,0 +1,166 @@
+.main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 77px 0;
+}
+
+.carouselBlock{
+  width: 870px;
+  height: 400px;
+}
+
+.carouselImage{
+  width: 870px;
+  height: 400px;
+}
+
+img{
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.promotion{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+  height: 400px;
+  width: 260px;
+}
+
+.promotionCost{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 67px;
+}
+
+.promotionCostButton button{
+  background: #1C62CD;
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  color: #FFFFFF;
+  border: none;
+  cursor: default !important;
+}
+
+.promotionCostText p:first-child{
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 32px;
+  color: #1C62CD;
+  margin: 0 6px 6px 0;
+}
+
+.promotionCostText p:last-child{
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 17px;
+  color: #C4C4C4;
+  margin: 0 8px 0 0;
+  text-align: right;
+  text-decoration: line-through;
+}
+
+.promotionInfo{
+  height: auto;
+  padding-bottom: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promotionInfo img{
+  width: 125px;
+  height: 175px;
+  margin: 0 auto;
+}
+
+.promotionInfo p{
+  margin: 6px 0 0 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.promotionDate{
+  height: 100px;
+  background: #F0F0F4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.promotionDate p:first-child{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+}
+
+.promotionDate p:last-child{
+  color: #1C62CD;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1130px) {
+  .carouselBlock{
+    width: 670px;
+    height: 400px;
+  }
+
+  .carouselImage{
+    width: 670px;
+    height: 400px;
+  }
+
+  img{
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main{
+    flex-direction: column;
+  }
+
+  .carouselBlock{
+    width: 100%;
+    max-height: 280px;
+  }
+
+  .carouselImage{
+    width: 100%;
+    max-height: 280px;
+  }
+
+  img{
+    max-height: 280px;
+  }
+
+  .promotion{
+    margin: 30px auto 0;
+  }
+
+  .main{
+    margin: 25px 0 50px;
+  }
+}
+

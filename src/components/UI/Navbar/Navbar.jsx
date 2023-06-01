@@ -8,7 +8,7 @@ const Navbar = ({setIsActive}) => {
     const listLinks = ['Магазины', 'Акции', 'Доставка и оплата']
 
     return (
-        <div className={'container'}>
+        <div className={'containerCustom'}>
             <div className={cl.mainNavbar}>
                 <nav>
                     <div className={cl.desktopMain}>

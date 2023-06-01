@@ -1,0 +1,37 @@
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
+.searchStyleButtons{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+  overflow: auto;
+}
+
+.searchStyleButtons button{
+  padding: 12px 26px;
+  margin: 0 5px 0 0;
+  color: #000000;
+  white-space: nowrap;
+}
+
+button[class=active]{
+  background: #F0F0F4;
+  font-weight: 700;
+}
+
+.searchInput {
+  display: flex;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.searchInput input{
+  width: 95%;
+  height: 50px;
+  background: #F0F0F4;
+  border-radius: 3px;
+  padding-left: 20px;
+}

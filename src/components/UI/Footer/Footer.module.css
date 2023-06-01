@@ -34,6 +34,7 @@
 .footerMainInfoSpam {
     display: flex;
     flex-direction: column;
+    font-weight: 700;
 }
 
 .footerMainInfoSpamInput{
@@ -51,26 +52,27 @@
 }
 
 
-.footerMainInfoSpamInput button{
-    background: #1C62CD;
-    font-family: 'SF Pro Display', sans-serif;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 13px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 10px 16px;
-    color: #FFFFFF;
-    border: none;
-}
-
 .footerMainInfoSpamInput input::placeholder{
     color: #C4C4C4;
+}
+
+
+.footerMainInfoSpamInput input:focus{
+    border: none !important;
 }
 
 .footerMainInfoLists{
     display: flex;
     flex-direction: row;
+}
+
+.footerMainInfoListsMobile{
+    display: none;
+    margin-bottom: 20px;
+}
+
+.footerMainInfoListsMobileAccordion{
+    width: 100%;
 }
 
 .footerMainInfoLists ul:first-child{
@@ -117,7 +119,25 @@
         margin-top: 20px;
     }
 
+    .footerLawyerInfo p:first-child{
+        margin-right: 35px;
+    }
+
     .footerMainInfoSpamInput{
         margin-top: 15px;
     }
+
+    .footerMainInfoLists{
+        display: none;
+    }
+
+    .footerMainInfoListsMobile{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
+
+
+
+/*other component styles*/
