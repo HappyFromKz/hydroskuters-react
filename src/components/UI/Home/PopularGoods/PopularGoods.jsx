@@ -19,7 +19,7 @@ const PopularGoods = () => {
     {id: 4, name: 'Спасательное снаряжение', path: 'verevka', pic: verevka, isSale: true, isLiked: false, price: 800, count: 0},
     {id: 5, name: 'Мужской костюм 3мм', path: 'manCastum', pic: manCastum, isSale: false, isLiked: false, price: 7000, count: 2}]
 
-  const responsiveOptions = [{breakpoint: '1199px', numVisible: 1, numScroll: 1}, {breakpoint: '991px', numVisible: 2, numScroll: 1}, {breakpoint: '767px', numVisible: 1, numScroll: 1}]
+  const responsiveOptions = [{breakpoint: '1170px', numVisible: 3, numScroll: 1}, {breakpoint: '768px', numVisible: 2, numScroll: 1}, {breakpoint: '420px', numVisible: 1, numScroll: 1}]
 
   const navigate = useNavigate()
 
@@ -78,14 +78,12 @@ const PopularGoods = () => {
   return (
     <div className={cl.main}>
       <h1>Популярные товары</h1>
-
-      <div className={ cl.popularMain}>
+      <div>
         <div className={cl.desktop}>
-
-          <Carousel value={goods} numScroll={1} numVisible={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
+          <Carousel value={goods} numScroll={1} numVisible={4} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
         </div>
         <div className={cl.mobile}>
-          <Carousel value={goods} numVisible={1} numScroll={1} orientation="vertical" verticalViewPortHeight="400px" itemTemplate={productTemplate} />
+          <Carousel value={goods} numVisible={1} numScroll={1} orientation="vertical" verticalViewPortHeight="415px" itemTemplate={productTemplate} />
         </div>
       </div>
 

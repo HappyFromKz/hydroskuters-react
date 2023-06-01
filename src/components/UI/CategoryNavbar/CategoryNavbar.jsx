@@ -1,8 +1,8 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import cl from './CategoryNavbar.module.css'
 import './CategoryNavbar.module.css'
 import {useNavigate} from "react-router-dom";
-import {CategoryContext} from "../../../context";
+
 const CategoryNavbar = ({categories}) => {
   const navigate = useNavigate();
 

@@ -1,18 +1,15 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import cl from './HomeCategoriesMenu.module.css'
 import {useNavigate} from "react-router-dom";
-import {CategoryContext} from "../../../../context";
 
 
 const HomeCategoriesMenu = ({homeCategories}) => {
   const navigate = useNavigate();
-  const {chosenCategory, setChosenCategory} = useContext(CategoryContext)
 
   return (
     <div className={cl.main}>
       {homeCategories.map(category =>
         <div key={category.id} className={cl.categoryBlock} onClick={() => {
-          setChosenCategory(category.path)
           navigate('category-catalog/' + category.path)
         }}>
           <div className={cl.categoryBlockText}>

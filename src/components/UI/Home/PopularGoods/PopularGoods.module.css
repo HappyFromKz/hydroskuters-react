@@ -7,7 +7,8 @@
 .goodsItemMain{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .main h1{
@@ -154,4 +155,15 @@
   .main h1{
     text-align: center;
   }
+}
+
+@media screen and (max-width: 420px){
+  .desktop{
+    display: none;
+  }
+  
+  .mobile{
+    display: block;
+  }
+  
 }
