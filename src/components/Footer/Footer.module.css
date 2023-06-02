@@ -76,7 +76,7 @@
 }
 
 .footerMainInfoLists ul:first-child{
-    margin-right: 5vw;
+    margin-right: 5vw !important;
 }
 
 .footerMainInfoLists ul li{

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import cl from './SearchProduct.module.css'
-import MyButton from "../../MyButton/MyButton";
+import MyButton from "../../UI/MyButton/MyButton";
 const SearchProduct = () => {
   const [activeButton, setActiveButton] = useState(1)
   const buttonItems = [{id:1, name:'Поиск по  номеру'}, {id:2, name:'Поиск по марке'}, {id:3, name:'Поиск по названию товара'}, ]

@@ -1,0 +1,63 @@
+.main{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.headerNames h1{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.headerNamesButtons{
+  display: flex;
+  flex-direction: row;
+  margin-top: 26px;
+}
+
+.headerNamesButtons button{
+  background: #F0F0F4;
+  border-radius: 3px;
+  padding: 4px 22px;
+  margin-right: 10px;
+}
+
+.headerNamesButtons button:last-child{
+  margin-right: 0;
+}
+
+.headerButtons{
+  display: flex;
+  align-items: end;
+}
+
+.headerButtonsInner{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerButtonsInner select{
+  border: 1.5px solid #D7D9DF;
+}
+
+.headerButtonsInner select {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 8px 20px;
+  margin-right: 34px;
+}
+
+.headerButtonsInner select:focus {
+  outline: none;
+}
+
+.headerButtonsInner select::-ms-expand {
+  display: none;
+}
+
+.headerButtonsInner svg{
+  margin-right: 10px;
+}

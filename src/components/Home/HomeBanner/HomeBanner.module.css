@@ -1,0 +1,107 @@
+.main{
+  width: 100%;
+  height: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 46px;
+  background: #1C62CD;
+}
+
+.bannerPicture{
+  width: 330px;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 4%;
+}
+
+.bannerPictureMobile{
+  display: none;
+}
+
+.display{
+  display: flex;
+  flex-direction: row;
+}
+
+.bannerText{
+  margin-right: 1%;
+}
+
+.bannerText p{
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 36px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.main button{
+  background: #FFFFFF;
+  font-family: 'SF Pro Display', sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #000000;
+  border: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0.5% 5.2%;
+  white-space: nowrap;
+  margin: 1px;
+}
+
+@media screen and (max-width: 1170px) {
+  .main{
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+  }
+
+  .main button{
+    margin-top: 15px;
+  }
+
+  .bannerPicture {
+    margin-right: 10px;
+  }
+
+  .bannerText{
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main{
+    height: 290px;
+  }
+
+  .display{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bannerPicture {
+    margin: 0 0 10px 0;
+  }
+
+  .bannerPicture{
+    display: none;
+  }
+
+  .bannerPictureMobile{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bannerText p {
+    font-size: 28px;
+  }
+
+  .main button {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}

@@ -1,9 +1,9 @@
 import React from 'react';
-import TopAdvertising from "../components/UI/Home/TopAdvertising/TopAdvertising";
+import TopAdvertising from "../components/Home/TopAdvertising/TopAdvertising";
 import cl from "./pagesStyle/Home.module.css"
-import SearchProduct from "../components/UI/Home/SearchProduct/SearchProduct";
-import HomeCategoriesMenu from "../components/UI/Home/HomeCategoriesMenu/HomeCategoriesMenu";
-import PopularGoods from "../components/UI/Home/PopularGoods/PopularGoods";
+import SearchProduct from "../components/Home/SearchProduct/SearchProduct";
+import HomeCategoriesMenu from "../components/Home/HomeCategoriesMenu/HomeCategoriesMenu";
+import PopularGoods from "../components/Home/PopularGoods/PopularGoods";
 
 
 import quadro from "C:/projects/react/hydroskuters-react/src/assets/categoriesHomeMenu/quadro.png";
@@ -12,6 +12,7 @@ import cater from "C:/projects/react/hydroskuters-react/src/assets/categoriesHom
 import snow from "C:/projects/react/hydroskuters-react/src/assets/categoriesHomeMenu/snow.png";
 import everyhod from "C:/projects/react/hydroskuters-react/src/assets/categoriesHomeMenu/everyhod.png";
 import dvig from "C:/projects/react/hydroskuters-react/src/assets/categoriesHomeMenu/dvig.png";
+import HomeBanner from "../components/Home/HomeBanner/HomeBanner";
 
 const Home = () => {
 
@@ -27,6 +28,7 @@ const Home = () => {
       <TopAdvertising/>
       <SearchProduct/>
       <HomeCategoriesMenu homeCategories={homeCategories}/>
+      <HomeBanner/>
       <PopularGoods/>
     </div>
   );

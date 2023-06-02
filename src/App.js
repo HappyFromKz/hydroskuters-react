@@ -1,15 +1,17 @@
 import './App.css';
 import {BrowserRouter} from "react-router-dom";
 import AppRouter from "./components/AppRouter";
-import Navbar from "./components/UI/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import {useState} from "react";
-import ModelMenu from "./components/UI/Navbar/ModelMenu";
-import Footer from "./components/UI/Footer/Footer";
-import CategoryNavbar from "./components/UI/CategoryNavbar/CategoryNavbar";
-import {CategoryContext} from "./context";
+import ModelMenu from "./components/Navbar/ModelMenu";
+import Footer from "./components/Footer/Footer";
+import CategoryNavbar from "./components/CategoryNavbar/CategoryNavbar";
+import {CategoryContext, GoodsContext} from "./context";
+import Service from "./API/Service";
+
 
 function App() {
   const [menuActive, setMenuActive] = useState(false)
@@ -28,23 +30,20 @@ function App() {
     {id: 13, name: 'Снегоходы', path: 'category-catalog/snowmobiles', icon: ''},
     {id: 14, name: 'Двигатели', path: 'category-catalog/engines', icon: ''},
     {id: 15, name: 'Запчасти', path: 'category-catalog/spare-parts', icon: ''}]
-  const categories =
-    [{id: 1, name: 'Квадроциклы', path: 'atvs'},
+
+  const [categories, setCategories] = useState([{id: 1, name: 'Квадроциклы', path: 'atvs'},
     {id: 2, name: 'Катера', path: 'carriage'},
     {id: 3, name: 'Гидроциклы', path: 'jet-skis'},
     {id: 4, name: 'Лодки', path: 'boats'},
     {id: 5, name: 'Вездеходы', path: 'all-terrain-vehicles'},
     {id: 6, name: 'Снегоходы', path: 'snowmobiles'},
     {id: 7, name: 'Двигатели', path: 'engines'},
-    {id: 8, name: 'Запчасти', path: 'spare-parts'}]
-  const [chosenCategory, setChosenCategory] = useState(null)
-
-
+    {id: 8, name: 'Запчасти', path: 'spare-parts'}])
 
   return (
     <CategoryContext.Provider value={{
-      chosenCategory,
-      setChosenCategory
+      categories,
+      setCategories
     }}>
       <BrowserRouter>
         <div className={'containerCustom'}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from './Footer.module.css'
 import { Accordion, AccordionTab } from 'primereact/accordion';
-import MyButton from "../MyButton/MyButton";
+import MyButton from "../UI/MyButton/MyButton";
 
 
 const Footer = () => {

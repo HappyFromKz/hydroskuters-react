@@ -17,6 +17,9 @@ const ModelMenu = ({items, isActive, setIsActive}) => {
                         <button onClick={() => {navigate(item.path)}}>{item.name}</button>
                     </div>
                 )}
+                <div className={'menuContentUnderText'}>
+                  <p>Москва, ул. Науки  25</p>
+                </div>
             </div>
         </div>
     );
