@@ -1,14 +1,14 @@
 import React from 'react';
-import cl from "../../Home/PopularGoods/PopularGoods.module.css";
+import cl from "./ProductItem.module.css";
 import MyButton from "../MyButton/MyButton";
 import MyPicture from "../MyPicture/MyPicture";
 import {useNavigate} from "react-router-dom";
 
-const ProductItem = ({product}) => {
+const ProductItem = ({product, styles}) => {
   const navigate = useNavigate()
 
   return (
-    <div className={cl.goodsItemMain}>
+    <div key={product.id} style={styles} className={cl.goodsItemMain}>
       <div className={cl.mainItem} onClick={() => {navigate('/product/' + product.path)}}>
         <div className={cl.goodsSaleLike}>
           {product.isSale

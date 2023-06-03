@@ -10,7 +10,6 @@ import ModelMenu from "./components/Navbar/ModelMenu";
 import Footer from "./components/Footer/Footer";
 import CategoryNavbar from "./components/CategoryNavbar/CategoryNavbar";
 import {CategoryContext, GoodsContext} from "./context";
-import Service from "./API/Service";
 
 
 function App() {

@@ -8,13 +8,6 @@
   display: none;
 }
 
-.goodsItemMain{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
 .main h1{
   text-align: left;
   font-weight: 700;
@@ -24,141 +17,17 @@
   margin-bottom: 25px;
 }
 
-.goodsSaleLike{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.desktop{
+  width: 1234px;
+  margin-left: -32px;
 }
 
-.goodsSaleLike svg{
-  margin: 16px 20px 0 0;
-  transition: 2.2s;
+@media screen and (max-width: 1170px){
+  .desktop{
+    width: auto;
+    margin-left: -32px;
+  }
 }
-
-.mainItem{
-  width: 240px;
-  height: 400px;
-  border: 1px solid #E0E0E0;
-}
-
-.mainItem:hover{
-  box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
-  border-radius: 3px;
-}
-
-.goodsPicture{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin: 7px 0 11px;
-}
-
-.goodsPictureHover{
-  width: 200px;
-  height: 60px;
-  background: #FFFFFF;
-  opacity: 0.7;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-  position: absolute;
-  top: 70px;
-  left: 20px;
-  display: none;
-}
-
-.goodsPictureHover p{
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-  margin: 0;
-}
-
-.mainItem:hover .goodsPictureHover{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.goodsInfoCart{
-  display: flex;
-  flex-direction: column;
-}
-
-
-.goodsInfoCartP{
-  height: 42px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  margin: 12px 0 0;
-  padding: 0 20px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.mainItem:hover .goodsInfoCartP{
-  color: #1C62CD;
-}
-
-.goodsInfoCartCount{
-  margin-top: 20px;
-}
-
-.goodsInfoCartCount p{
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  margin: 0;
-}
-
-.mainItem:hover .goodsInfoCartCount p{
-  color: #1C62CD;
-}
-
-.goodsInfoCartCountIsnt{
-  margin: 7px 0 20px;
-}
-
-.goodsInfoCartCountIsnt p:first-child{
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  color: #2F3035;
-  margin-bottom: 13px;
-  padding: 0 20px;
-}
-
-.goodsInfoCartCountIsnt p:last-child{
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  margin: 0;
-  color: #1C62CD;
-  text-decoration: underline;
-}
-
-.goodsInfoCartCountButton{
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-  background-color: red !important;
-}
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 768px){
   .main h1{

@@ -2,7 +2,6 @@ import React from 'react';
 import cl from './TopAdvertising.module.css'
 import 'bootstrap/dist/css/bootstrap.css';
 
-import promotionPic from "C:/projects/react/hydroskuters-react/src/assets/promotion/promotion.png";
 
 
 
@@ -54,7 +53,7 @@ const TopAdvertising = () => {
           </div>
         </div>
         <div className={cl.promotionInfo}>
-          <img src={promotionPic} alt=""/>
+          <img src='https://4.downloader.disk.yandex.ru/preview/033afbddfc5356136c7c00566276ca590e829a43f708eeefac5e16524d0e9fd4/inf/hMgI7h3Z5gGt5Er2AsdGytJRws4WThbNW_suoE9BIOHFhpf-aADh6Jc_3ifkB4nnaeJgCLi8tPPH8JEuVT6-Lw%3D%3D?uid=1684283561&filename=promotion.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1684283561&tknv=v2&size=937x898' alt=""/>
           <p>Лодочный мотор <br/>
             Suzuki DF9.9BRS</p>
         </div>

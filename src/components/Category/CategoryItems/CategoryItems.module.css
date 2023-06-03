@@ -1,0 +1,14 @@
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
+.products{
+  display: grid;
+  grid-template-columns: 300px 300px 270px;
+}
+
+.product{
+  display: flex;
+  justify-content: start;
+}
