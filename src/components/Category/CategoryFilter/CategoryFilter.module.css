@@ -1,4 +1,113 @@
 .main{
   width: 290px;
-  height: 1330px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainTitle p{
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 19px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+
+.filterStock, .filterSale, .filterModel, .filterCost{
+  margin: 0 0 30px 5px;
+}
+
+.main h5{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 19px;
+}
+
+.filterStockBody, .filterSaleBody{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.filterStockItem, .filterSaleItem{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.filterStockItem label, .filterSale label{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  margin-left: 12px;
+}
+
+
+.filterModelBody input{
+  background: none;
+  outline: none;
+  padding: 8px 20px;
+  border: 1px solid #E0E0E0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 14px;
+  width: 100%;
+}
+
+.filterModelBody input::placeholder{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 14px;
+  color: #BDBEC2;
+
+}
+
+
+.filterCostBody{
+  width: 92%;
+  margin: 0 auto;
+}
+
+
+.filterApply{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filterApply button{
+  padding: 16px 85px;
+  border: none;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #BDBEC2;
+  background: #F0F0F4;
+  transition: 0.4s;
+}
+
+.activeButton{
+  background: #1C62CD !important;
+  color: #FFFFFF !important;
+}
+
+
+.clearButton{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+  text-decoration-line: underline;
+  color: #C4C4C4;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .main{
+    margin: 0 auto;
+  }
 }

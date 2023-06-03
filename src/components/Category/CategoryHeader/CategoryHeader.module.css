@@ -50,6 +50,14 @@
   margin-right: 34px;
 }
 
+.headerButtonsInner select option{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 8px 20px;
+  border-radius: 0;
+}
+
 .headerButtonsInner select:focus {
   outline: none;
 }
@@ -61,3 +69,32 @@
 .headerButtonsInner svg{
   margin-right: 10px;
 }
+
+
+
+@media screen and (max-width: 768px) {
+  .main{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .headerNamesButtons{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .headerNamesButtons button{
+    margin: 0 10px 5px 10px;
+  }
+
+  .headerNamesButtons button:last-child{
+    margin-right: 10px;
+  }
+
+
+  .headerNamesButtons, .headerButtons{
+    justify-content: center;
+  }
+}
+

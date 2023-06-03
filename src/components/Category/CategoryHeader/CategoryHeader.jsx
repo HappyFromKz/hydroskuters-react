@@ -2,7 +2,7 @@ import React, {useContext, useEffect} from 'react';
 import cl from './CategoryHeader.module.css'
 import {CategoryContext} from "../../../context";
 
-const CategoryHeader = ({path}) => {
+const CategoryHeader = ({path, setSortingStyle, sortingStyle}) => {
   const {categories, setCategories} = useContext(CategoryContext)
 
   const headerNamesButtons = [{id: 1, name: 'Полноприводные'}, {id: 2, name: 'от 5000'}, {id: 3, name: 'BRP'}, {id: 4, name: 'еще'}]
@@ -19,8 +19,10 @@ const CategoryHeader = ({path}) => {
       </div>
       <div className={cl.headerButtons}>
         <div className={cl.headerButtonsInner}>
-          <select>
-            <option value="По полулярности">По полулярности</option>
+          <select value={sortingStyle} onChange={(event) => {setSortingStyle(event.target.value)}}>
+            <option value="null">Выбрать сортировку</option>
+            <option value="purchased" >По полулярности</option>
+            <option value="price">По цене</option>
           </select>
           <div>
             <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">

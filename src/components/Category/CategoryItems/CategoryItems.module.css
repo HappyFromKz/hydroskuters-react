@@ -12,3 +12,28 @@
   display: flex;
   justify-content: start;
 }
+
+@media screen and (max-width: 1170px) {
+  .products{
+    grid-template-columns: 280px 280px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .products{
+    justify-content: center;
+  }
+
+  .product{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .products{
+    grid-template-columns: 280px;
+  }
+}
+

@@ -8,3 +8,21 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 1170px) {
+  .mainFilterAndCatalog{
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainFilterAndCatalog{
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainFilterAndCatalog{
+    flex-direction: column;
+  }
+}
