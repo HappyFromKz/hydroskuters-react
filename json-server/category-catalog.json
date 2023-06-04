@@ -8,9 +8,16 @@
       "isSale":false,
       "isLiked":false,
       "price":1049500,
+      "old_price":1900000,
       "count":1,
       "purchased": 4,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-1",
+      "manufacturer": "Kazakhstan",
+      "number_of_seats": 3,
+      "power": 155155,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":2,
@@ -20,9 +27,16 @@
       "isSale":true,
       "isLiked":false,
       "price":1100475,
+      "old_price": 1900000,
       "count":1,
       "purchased": 3,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-2",
+      "manufacturer": "USA",
+      "number_of_seats": 3,
+      "power": 155,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":3,
@@ -32,9 +46,16 @@
       "isSale":false,
       "isLiked":false,
       "price":1323700,
+      "old_price": 1900000,
       "count":1,
       "purchased":2,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-3",
+      "manufacturer": "Canada",
+      "number_of_seats": 3,
+      "power": 155,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":4,
@@ -44,9 +65,16 @@
       "isSale":true,
       "isLiked":false,
       "price":1108490,
+      "old_price": 1900000,
       "count":0,
       "purchased": 7,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-4",
+      "manufacturer": "USA",
+      "number_of_seats": 2,
+      "power": 155,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":5,
@@ -56,9 +84,16 @@
       "isSale":false,
       "isLiked":false,
       "price":1543000,
+      "old_price": 1900000,
       "count":1,
       "purchased": 3,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-5",
+      "manufacturer": "Canada",
+      "number_of_seats": 2,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":6,
@@ -68,9 +103,16 @@
       "isSale":false,
       "isLiked":false,
       "price":732345,
+      "old_price": 1900000,
       "count":1,
       "purchased": 3,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-6",
+      "manufacturer": "Kazakhstan",
+      "number_of_seats": 3,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":7,
@@ -80,9 +122,16 @@
       "isSale":false,
       "isLiked":false,
       "price":857666,
+      "old_price": 1900000,
       "count":1,
       "purchased": 12,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-7",
+      "manufacturer": "Canada",
+      "number_of_seats": 3,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":8,
@@ -92,9 +141,16 @@
       "isSale":true,
       "isLiked":false,
       "price":1229711,
+      "old_price": 1900000,
       "count":1,
       "purchased": 3,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-8",
+      "manufacturer": "Kazakhstan",
+      "number_of_seats": 2,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":9,
@@ -104,9 +160,16 @@
       "isSale":false,
       "isLiked":false,
       "price":587440,
+      "old_price": 1900000,
       "count":1,
       "purchased": 9,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-9",
+      "manufacturer": "USA",
+      "number_of_seats": 2,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":10,
@@ -116,9 +179,16 @@
       "isSale":false,
       "isLiked":false,
       "price":587440,
+      "old_price": 1900000,
       "count":1,
       "purchased": 2,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-10",
+      "manufacturer": "Kazakhstan",
+      "number_of_seats": 2,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":11,
@@ -128,9 +198,16 @@
       "isSale":true,
       "isLiked":false,
       "price":677440,
+      "old_price": 1900000,
       "count":0,
       "purchased": 1,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-11",
+      "manufacturer": "USA",
+      "number_of_seats": 2,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":12,
@@ -140,9 +217,16 @@
       "isSale":false,
       "isLiked":false,
       "price":497440,
+      "old_price": 1900000,
       "count":0,
       "purchased": 15,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-12",
+      "manufacturer": "Canada",
+      "number_of_seats": 2,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":13,
@@ -152,9 +236,16 @@
       "isSale":false,
       "isLiked":false,
       "price":1049500,
+      "old_price": 1900000,
       "count":1,
       "purchased": 3,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-13",
+      "manufacturer": "Canada",
+      "number_of_seats":3,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":14,
@@ -164,9 +255,16 @@
       "isSale":true,
       "isLiked":false,
       "price":1100475,
+      "old_price": 1900000,
       "count":1,
       "purchased": 6,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-14",
+      "manufacturer": "USA",
+      "number_of_seats":3,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":15,
@@ -176,9 +274,16 @@
       "isSale":false,
       "isLiked":false,
       "price":1323700,
+      "old_price": 1900000,
       "count":1,
       "purchased": 41,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-15",
+      "manufacturer": "Canada",
+      "number_of_seats":3,
+      "power": 155 ,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     },
     {
       "id":16,
@@ -188,9 +293,16 @@
       "isSale":true,
       "isLiked":false,
       "price":1108490,
+      "old_price": 1900000,
       "count":0,
       "purchased": 3,
-      "category_id": 2
+      "category_id": 3,
+      "product_code": "366666-16",
+      "manufacturer": "Canada",
+      "number_of_seats": 3,
+      "power": 155,
+      "engine_type": "Бензиновый",
+      "year_release": 2023
     }
   ]
 }

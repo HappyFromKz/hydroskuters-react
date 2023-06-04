@@ -3,11 +3,7 @@ import cl from './CategoryFilter.module.css'
 import { RadioButton } from 'primereact/radiobutton';
 import { Slider } from 'primereact/slider';
 
-const CategoryFilter = ({filterSettings, setFilterSettings, minMax}) => {
-  console.log('priceRangeOld', filterSettings.priceRange)
-  function clearFilterSettings() {
-    setFilterSettings({stock: 'all', sale: 'all', model: '', priceRange: null})
-  }
+const CategoryFilter = ({filterAction, filterSettings, setFilterSettings, clearFilterSettings, minMax}) => {
 
   useEffect(() => {
     if (filterSettings.priceRange !== null){
@@ -36,10 +32,10 @@ const CategoryFilter = ({filterSettings, setFilterSettings, minMax}) => {
             <RadioButton checked={filterSettings.stock === 'all'} onChange={() => setFilterSettings({...filterSettings, stock: "all"})} name="stock" type="radio"/><label>Все</label>
           </div>
           <div className={cl.filterStockItem}>
-            <RadioButton checked={filterSettings.stock === 'in stock'} onChange={() => setFilterSettings({...filterSettings, stock: "in stock"})} name="stock" type="radio"/><label>В наличии</label>
+            <RadioButton checked={filterSettings.stock === 'inStock'} onChange={() => setFilterSettings({...filterSettings, stock: "inStock"})} name="stock" type="radio"/><label>В наличии</label>
           </div>
           <div className={cl.filterStockItem}>
-            <RadioButton checked={filterSettings.stock === 'not in stock'} onChange={() => setFilterSettings({...filterSettings, stock: "not in stock"})} name="stock" type="radio"/><label>Не в наличии</label>
+            <RadioButton checked={filterSettings.stock === 'outOfStock'} onChange={() => setFilterSettings({...filterSettings, stock: "outOfStock"})} name="stock" type="radio"/><label>Не в наличии</label>
           </div>
         </div>
       </div>
@@ -50,10 +46,10 @@ const CategoryFilter = ({filterSettings, setFilterSettings, minMax}) => {
             <RadioButton checked={filterSettings.sale === 'all'} onChange={() => setFilterSettings({...filterSettings, sale: "all"})} name="sale" type="radio"/><label>Все</label>
           </div>
           <div className={cl.filterSaleItem}>
-            <RadioButton checked={filterSettings.sale === 'in sale'} onChange={() => setFilterSettings({...filterSettings, sale: "in stock"})} name="sale" type="radio"/><label>С акцией</label>
+            <RadioButton checked={filterSettings.sale === 'onSale'} onChange={() => setFilterSettings({...filterSettings, sale: "onSale"})} name="sale" type="radio"/><label>С акцией</label>
           </div>
           <div className={cl.filterSaleItem}>
-            <RadioButton checked={filterSettings.sale === 'not in sale'} onChange={() => setFilterSettings({...filterSettings, sale: "not in stock"})} name="sale" type="radio"/><label>Без акций</label>
+            <RadioButton checked={filterSettings.sale === 'notOnSale'} onChange={() => setFilterSettings({...filterSettings, sale: "notOnSale"})} name="sale" type="radio"/><label>Без акций</label>
           </div>
         </div>
       </div>
@@ -64,10 +60,11 @@ const CategoryFilter = ({filterSettings, setFilterSettings, minMax}) => {
         </div>
       </div>
       <div className={cl.filterApply}>
-        <button className={filterSettings.stock !== 'all' || filterSettings.sale !== 'all' ||
-                          filterSettings.model !== '' || filterSettings.priceRange !== null ? cl.activeButton : ''}>Выбрать</button>
+        <button className={cl.clearButton} onClick={() => {filterAction()}}>Выбрать</button>
       </div>
-      <p className={cl.clearButton} onClick={() => {clearFilterSettings()}}>Сбросить фильтр</p>
+      <p className={cl.clearButton} onClick={() => {
+        clearFilterSettings();
+      }}>Сбросить фильтр</p>
     </div>
   );
 };

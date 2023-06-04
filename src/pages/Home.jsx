@@ -3,7 +3,7 @@ import TopAdvertising from "../components/Home/TopAdvertising/TopAdvertising";
 import cl from "./pagesStyle/Home.module.css"
 import SearchProduct from "../components/Home/SearchProduct/SearchProduct";
 import HomeCategoriesMenu from "../components/Home/HomeCategoriesMenu/HomeCategoriesMenu";
-import PopularGoods from "../components/Home/PopularGoods/PopularGoods";
+import CarouselGoods from "../components/UI/CarouselGoods/CarouselGoods";
 
 
 import HomeBanner from "../components/Home/HomeBanner/HomeBanner";
@@ -35,7 +35,7 @@ const Home = () => {
       <SearchProduct/>
       <HomeCategoriesMenu homeCategories={homeCategories}/>
       <HomeBanner/>
-      <PopularGoods goods={goods}/>
+      <CarouselGoods goods={goods} title={"С этим товаром покупают"}/>
     </div>
   );
 };

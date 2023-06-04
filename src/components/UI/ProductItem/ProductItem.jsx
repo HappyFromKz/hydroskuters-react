@@ -1,15 +1,24 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import cl from "./ProductItem.module.css";
 import MyButton from "../MyButton/MyButton";
 import MyPicture from "../MyPicture/MyPicture";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
+import {CategoryContext} from "../../../context";
 
 const ProductItem = ({product, styles}) => {
   const navigate = useNavigate()
 
+  const category = useParams().category
+
+  const {setChosenCategory} = useContext(CategoryContext)
+
+  useEffect(() => {
+    setChosenCategory(category)
+  }, [])
+
   return (
     <div key={product.id} style={styles} className={cl.goodsItemMain}>
-      <div className={cl.mainItem} onClick={() => {navigate('/product/' + product.path)}}>
+      <div className={cl.mainItem} onClick={() => {navigate('/product/' + product.id)}}>
         <div className={cl.goodsSaleLike}>
           {product.isSale
             ? <div><MyButton style={{padding: '7px 15px', fontWeight: '400', fontSize: '12px', lineHeight: '14px'}}>sale</MyButton></div>

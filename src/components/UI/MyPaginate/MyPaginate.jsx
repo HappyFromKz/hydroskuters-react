@@ -1,5 +1,5 @@
 import React from 'react';
-import {getPagesArray} from "../../../utils/pages";
+import {getPagesArray} from "../../../utils/index";
 import cl from './MyPaginate.module.css'
 
 const MyPaginate = ({totalPages, page, action}) => {

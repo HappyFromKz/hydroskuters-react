@@ -1,11 +1,11 @@
-import './PopularGoods.module.css'
+import './CarouselGoods.module.css'
 import React from 'react';
-import cl from './PopularGoods.module.css'
+import cl from './CarouselGoods.module.css'
 import { Carousel } from 'primereact/carousel';
-import ProductItem from "../../UI/ProductItem/ProductItem";
+import ProductItem from "../ProductItem/ProductItem";
 
 
-  const PopularGoods = ({goods}) => {
+  const CarouselGoods = ({goods, title}) => {
 
   const responsiveOptions = [{breakpoint: '1170px', numVisible: 3, numScroll: 1}, {breakpoint: '768px', numVisible: 2, numScroll: 1}, {breakpoint: '420px', numVisible: 1, numScroll: 1}]
 
@@ -16,7 +16,7 @@ import ProductItem from "../../UI/ProductItem/ProductItem";
 
   return (
     <div className={cl.main}>
-      <h1>Популярные товары</h1>
+      <h1>{title}</h1>
       <div>
         <div className={cl.desktop}>
           <Carousel value={goods} numScroll={1} numVisible={4} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
@@ -29,4 +29,4 @@ import ProductItem from "../../UI/ProductItem/ProductItem";
     </div>
   );
 };
-export default PopularGoods;
+export default CarouselGoods;

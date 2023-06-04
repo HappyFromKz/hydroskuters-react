@@ -1,6 +1,7 @@
 .main{
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .searchStyleButtons{
@@ -29,9 +30,31 @@ button[class=active]{
 }
 
 .searchInput input{
-  width: 95%;
+  width: 90%;
   height: 50px;
   background: #F0F0F4;
   border-radius: 3px;
   padding-left: 20px;
+}
+
+.searchOptionBlock{
+  position: absolute;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  width: 90%;
+  max-height: 300px;
+  box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+  background: #FFFFFF;
+  top: 123px;
+  overflow: auto;
+}
+
+.searchOptionBlockItem{
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+  border-bottom: 2px solid #C4C4C4;
 }

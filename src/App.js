@@ -9,7 +9,7 @@ import {useState} from "react";
 import ModelMenu from "./components/Navbar/ModelMenu";
 import Footer from "./components/Footer/Footer";
 import CategoryNavbar from "./components/CategoryNavbar/CategoryNavbar";
-import {CategoryContext, GoodsContext} from "./context";
+import {CategoryContext} from "./context";
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
     {id: 13, name: 'Снегоходы', path: 'category-catalog/snowmobiles', icon: ''},
     {id: 14, name: 'Двигатели', path: 'category-catalog/engines', icon: ''},
     {id: 15, name: 'Запчасти', path: 'category-catalog/spare-parts', icon: ''}]
-
+  const [chosenCategory, setChosenCategory] = useState(null)
   const [categories, setCategories] = useState([{id: 1, name: 'Квадроциклы', path: 'atvs'},
     {id: 2, name: 'Катера', path: 'carriage'},
     {id: 3, name: 'Гидроциклы', path: 'jet-skis'},
@@ -42,7 +42,9 @@ function App() {
   return (
     <CategoryContext.Provider value={{
       categories,
-      setCategories
+      setCategories,
+      chosenCategory,
+      setChosenCategory
     }}>
       <BrowserRouter>
         <div className={'containerCustom'}>

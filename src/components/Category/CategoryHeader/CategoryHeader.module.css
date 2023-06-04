@@ -78,6 +78,16 @@
     justify-content: center;
   }
 
+  .headerNames h1 {
+    margin-left: 10px ;
+  }
+
+  .headerButtons{
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    padding: 14px 0;
+  }
+
   .headerNamesButtons{
     margin-bottom: 20px;
     display: grid;
@@ -96,5 +106,6 @@
   .headerNamesButtons, .headerButtons{
     justify-content: center;
   }
+
 }
 

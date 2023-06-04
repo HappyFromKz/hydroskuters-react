@@ -85,16 +85,9 @@
   text-align: center;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #BDBEC2;
-  background: #F0F0F4;
-  transition: 0.4s;
+  background: #1C62CD;
+  color: #FFFFFF;
 }
-
-.activeButton{
-  background: #1C62CD !important;
-  color: #FFFFFF !important;
-}
-
 
 .clearButton{
   font-weight: 400;
@@ -107,7 +100,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .main{
+  .main {
     margin: 0 auto;
   }
 }

@@ -7,6 +7,7 @@ import CategoryFilter from "../components/Category/CategoryFilter/CategoryFilter
 import CategoryItems from "../components/Category/CategoryItems/CategoryItems";
 import axios from "axios";
 import {CategoryContext} from "../context";
+import {getFilteredProducts} from "../utils/index";
 
 
 const CategoryCatalog = () => {
@@ -20,16 +21,17 @@ const CategoryCatalog = () => {
   const [totalPages, setTotalPages] = useState(0)
   const [sortingStyle, setSortingStyle] = useState('null')
   const [filterSettings, setFilterSettings] = useState({stock: 'all', sale: 'all', model: '', priceRange: null})
+  const [sortedAndFilteredGoods, setSortedAndFilteredGoods] = useState([])
 
 
   useEffect(() => {
     getGoods()
+    console.log('goods', goods)
   }, [])
 
   async function getGoods(){
     const response = await axios.get('http://localhost:3000/category-catalog')
     setGoods(response.data)
-    setTotalPages(Math.ceil(response.data.length / itemsPerPage))
   }
 
   const sortedGoods = useMemo(() => {
@@ -38,6 +40,31 @@ const CategoryCatalog = () => {
     }
     return goods
   }, [sortingStyle, goods])
+
+  function applyFilters(){
+    setSortedAndFilteredGoods(getFilteredProducts(sortedGoods, filterSettings))
+  }
+
+  useEffect(() => {
+    applyFilters()
+  }, [sortedGoods])
+
+  useEffect(() => {
+    if (filterSettings.stock === 'all' &&
+      filterSettings.sale === 'all' &&
+      filterSettings.model === '' &&
+      filterSettings.priceRange === null){
+      applyFilters()
+    }
+  }, [filterSettings])
+
+  useEffect(() => {
+    setTotalPages(Math.ceil(sortedAndFilteredGoods.length / itemsPerPage))
+  }, [sortedAndFilteredGoods])
+
+  function clearFilterSettings(){
+    setFilterSettings({stock: 'all', sale: 'all', model: '', priceRange: null})
+  }
 
   const getMaxPrice = (data) => {
     const prices = data.map((item) => item.price);
@@ -51,20 +78,14 @@ const CategoryCatalog = () => {
 
   const minMax = {max: getMaxPrice(sortedGoods), min: getMinPrice(sortedGoods)};
 
-  const currentItems = sortedGoods.slice((page - 1) * itemsPerPage, ((page - 1) * itemsPerPage) + itemsPerPage);
-
-
-  useEffect(() => {
-    console.log('filterSettings', filterSettings)
-  }, [filterSettings])
-
+  const currentItems = sortedAndFilteredGoods.slice((page - 1) * itemsPerPage, ((page - 1) * itemsPerPage) + itemsPerPage);
 
   return (
     <div className={cl.main}>
       <MyRouterHistory items={items} styles={{margin: '35px 0', border: 'none'}}/>
       <CategoryHeader path={category} setSortingStyle={setSortingStyle} sortingStyle={sortingStyle}/>
       <div className={cl.mainFilterAndCatalog}>
-        <CategoryFilter filterSettings={filterSettings} setFilterSettings={setFilterSettings} minMax={minMax}/>
+        <CategoryFilter clearFilterSettings={clearFilterSettings} filterAction={applyFilters} filterSettings={filterSettings} setFilterSettings={setFilterSettings} minMax={minMax}/>
         <CategoryItems goods={currentItems} page={page} action={setPage} totalPages={totalPages}/>
       </div>
     </div>
