@@ -3,11 +3,41 @@
   flex-direction: column;
 }
 
-.cartHeader{
-
+.main h2{
+  margin: 30px 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
 }
 
-.cartItem{
-  border-bottom: 2px solid #C4C4C4;
-  margin-bottom: 10px;
+.main i{
+  cursor: pointer;
+}
+
+.cartTable{
+  margin-bottom: 30px;
+}
+
+.cartCount{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartCount i{
+  font-size: 18px;
+}
+
+.cartCount span{
+  font-size: 20px;
+  margin: 0 10px;
+  color: #03C04A;
+}
+
+.notFound p{
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
 }

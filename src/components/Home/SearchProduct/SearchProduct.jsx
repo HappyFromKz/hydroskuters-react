@@ -39,15 +39,23 @@ const SearchProduct = () => {
       </div>
       {searchTerm !== ''
         ?
-        <div className={cl.searchOptionBlock}>
-          {sortedGoods.map(item =>
-            <Link key={item.id} to={`/product/${item.id}`}>
-              <div className={cl.searchOptionBlockItem}>
-                {item.name}
-              </div>
-            </Link>
-          )}
-        </div>
+        sortedGoods.length !== 0
+          ?
+          <div className={cl.searchOptionBlock}>
+            {sortedGoods.map(item =>
+              <Link key={item.id} to={`/product/${item.id}`}>
+                <div className={cl.searchOptionBlockItem}>
+                  {item.name}
+                </div>
+              </Link>
+            )}
+          </div>
+          :
+          <div className={cl.searchOptionBlock}>
+            <div className={cl.searchOptionBlockItem}>
+              <p>Товаров с таким названием не найдено!</p>
+            </div>
+          </div>
         : ''
       }
     </div>

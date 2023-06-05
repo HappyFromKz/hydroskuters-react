@@ -140,4 +140,5 @@
 .goodsInfoCartCountButton{
   display: flex;
   flex-direction: row-reverse;
+  z-index: 99;
 }

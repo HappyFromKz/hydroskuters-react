@@ -58,3 +58,7 @@ button[class=active]{
   cursor: pointer;
   border-bottom: 2px solid #C4C4C4;
 }
+
+.searchOptionBlockItem p{
+  margin: 0;
+}
