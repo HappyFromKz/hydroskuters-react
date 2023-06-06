@@ -15,9 +15,9 @@ const ProductInfo = ({product}) => {
           : ''
         }
         <div className={cl.productPictureBlock}>
-          <div className={cl.productPicture} style={{backgroundImage: `url("https://1.downloader.disk.yandex.ru/preview/7fa8f50293d2bcf29d380dc6565178bf0491f894e35b6148dd1096765e32015a/inf/6tjzYEKgjL5IQbugMvQu72x2kitF9_ne1CyL6fIMIAQgCVaigoDZxAAr3nSgpvhy4yu15czZQG_IDFc1TGBOpA%3D%3D?uid=1684283561&filename=product-2-beauteful.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1684283561&tknv=v2&size=1920x932")`}}/>
+          {/*<div className={cl.productPicture} style={{backgroundImage: `url("https://1.downloader.disk.yandex.ru/preview/7fa8f50293d2bcf29d380dc6565178bf0491f894e35b6148dd1096765e32015a/inf/6tjzYEKgjL5IQbugMvQu72x2kitF9_ne1CyL6fIMIAQgCVaigoDZxAAr3nSgpvhy4yu15czZQG_IDFc1TGBOpA%3D%3D?uid=1684283561&filename=product-2-beauteful.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=1684283561&tknv=v2&size=1920x932")`}}/>*/}
+          <div className={cl.productPicture} style={{backgroundImage: `url(${product.pic})`}}/>
         </div>
-        {/*<div style={{ width: '500px', height: '375px', backgroundImage: `url(${product.pic})`}}/>*/}
         <div className={cl.oldCost}>
           <p>{product.old_price} &#8381;</p>
         </div>
