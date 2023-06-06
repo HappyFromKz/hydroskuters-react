@@ -120,6 +120,14 @@ img{
   margin: 0;
 }
 
+.carouselImageMobile{
+  display: none;
+}
+
+.carouselImageTablet{
+  display: none;
+}
+
 @media screen and (max-width: 1130px) {
   .carouselBlock{
     width: 670px;
@@ -161,6 +169,33 @@ img{
 
   .main{
     margin: 25px 0 50px;
+  }
+
+  .carouselImageDesktop{
+    display: none;
+  }
+
+  .carouselImageTablet{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .carouselBlock{
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .carouselImageDesktop{
+    display: none;
+  }
+
+  .carouselImageTablet{
+    display: none;
+  }
+
+  .carouselImageMobile{
+    display: block;
   }
 }
 

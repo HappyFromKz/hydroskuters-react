@@ -1,45 +1,62 @@
 import React from 'react';
 import cl from './TopAdvertising.module.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import { Carousel } from '@mantine/carousel';
+import {createStyles, getStylesRef} from "@mantine/core";
+import MyPicture from "../../UI/MyPicture/MyPicture";
 
 
+const useStyles = createStyles(() => ({
+  controls: {
+    ref: getStylesRef('controls'),
+    transition: 'opacity 150ms ease',
+    opacity: 0,
+  },
+
+  root: {
+    '&:hover': {
+      [`& .${getStylesRef('controls')}`]: {
+        opacity: 1,
+      },
+    },
+  },
+}));
 
 
 const TopAdvertising = () => {
 
-  const carouselItem = {id: 1, path: 'https://www.windward-islands.net/blog/wp-content/uploads/2015/06/kawazaki-jetski-1.png'}
+  const carouselItems =
+    [{id: 1, path: 'https://www.windward-islands.net/blog/wp-content/uploads/2015/06/kawazaki-jetski-1.png'},
+    {id: 2, path: 'https://mir-h.ru/public/sites/tabs_photo/384/29242b.jpg?11718'},
+    {id: 3, path: 'https://es.boats.com/boat-content/files/2015SEA-DOO-GTI-SE_resize.jpg'},
+    {id: 4, path: 'https://www.sea-doo.com/content/dam/global/en/sea-doo/MY20/images/models/performance/gtr/MY20-FAMILY-New-Platform.jpeg?imwidth=2048'}]
 
-  const carouselItems = [{id: 2, path: 'https://mir-h.ru/public/sites/tabs_photo/384/29242b.jpg?11718'},
-                                                  {id: 3, path: 'https://es.boats.com/boat-content/files/2015SEA-DOO-GTI-SE_resize.jpg'},
-                                                  {id: 4, path: 'https://www.sea-doo.com/content/dam/global/en/sea-doo/MY20/images/models/performance/gtr/MY20-FAMILY-New-Platform.jpeg?imwidth=2048'}]
-
-
+  const { classes } = useStyles();
 
 
   return (
     <div className={cl.main}>
       <div className={cl.carouselBlock}>
-        <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item carouselItemImg active">
-              <img src={carouselItem.path} className="d-block w-100" alt="..."/>
-            </div>
+        <div className={cl.carouselImageDesktop}>
+          <Carousel mx="auto" classNames={classes + cl.carouselImage}>
             {carouselItems.map(item =>
-              <div key={item.id} className="carousel-item carouselItemImg">
-                <img src={item.path} className="d-block w-100" alt="..."/>
-              </div>
+              <Carousel.Slide><MyPicture style={{ height: '400px', backgroundImage: `url(${item.path})`}}/></Carousel.Slide>
             )}
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                  data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                  data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
+          </Carousel>
+        </div>
+        <div className={cl.carouselImageTablet}>
+          <Carousel mx="auto" classNames={classes + cl.carouselImage}>
+            {carouselItems.map(item =>
+              <Carousel.Slide><MyPicture style={{ height: '300px', backgroundImage: `url(${item.path})`}}/></Carousel.Slide>
+            )}
+          </Carousel>
+        </div>
+        <div className={cl.carouselImageMobile}>
+          <Carousel mx="auto" classNames={classes + cl.carouselImage}>
+            {carouselItems.map(item =>
+              <Carousel.Slide><MyPicture style={{ height: '200px', backgroundImage: `url(${item.path})`}}/></Carousel.Slide>
+            )}
+          </Carousel>
         </div>
       </div>
       <div className={cl.promotion}>
